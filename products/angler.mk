@@ -31,5 +31,5 @@ PRODUCT_MANUFACTURER := Huawei
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
-    BUILD_FINGERPRINT=google/angler/angler:7.1.2/N2G48B/4073501:user/release-keys \
-    PRIVATE_BUILD_DESC="angler-user 7.1.2 N2G48B 4073501 release-keys"
+    BUILD_FINGERPRINT=google/angler/angler:8.0.0/OPR5.170623.007/4302479:user/release-keys \
+    PRIVATE_BUILD_DESC="angler-user 8.0.0 OPR5.170623.007 4302479 release-keys"
