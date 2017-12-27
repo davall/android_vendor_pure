@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Google property overides
-ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
+ifeq ($(filter marlin sailfish taimen wahoo,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.control_privapp_permissions=enforce \

@@ -12,24 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product-if-exists, vendor/pixel-gapps/gapps.mk)
 # Include pure telephony configuration
 include vendor/pure/configs/pure_phone.mk
 
-# Inherit AOSP device configuration for marlin
-$(call inherit-product, device/google/marlin/aosp_marlin.mk)
+# Inherit AOSP device configuration for  taimen
+$(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
-# Inherit arm64 phone gapps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := marlin
-PRODUCT_BRAND := google
-PRODUCT_DEVICE := marlin
-PRODUCT_MODEL := Pixel XL
-PRODUCT_MANUFACTURER := Google
+PRODUCT_NAME := taimen
+PRODUCT_DEVICE := taimen
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Pixel 2 XL
+PRODUCT_MANUFACTURER := LGE
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=marlin \
-    BUILD_FINGERPRINT=google/marlin/marlin:7.1.2/NJH47D/4045516:user/release-keys \
-    PRIVATE_BUILD_DESC="marlin-user 7.1.2 NJH47D 4045516 release-keys"
+    PRODUCT_NAME=taimen \
+    BUILD_FINGERPRINT=google/taimen/taimen:8.1.0/OPM1.171019.011/4448085:user/release-keys \
+    PRIVATE_BUILD_DESC="taimen-user 8.1.0 OPM1.171019.011 4448085 release-keys"
+
+$(call inherit-product-if-exists, vendor/google/taimen/taimen-vendor.mk)
+
